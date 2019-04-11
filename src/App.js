@@ -56,7 +56,7 @@ class App extends Component {
 						<div className="panel-body">
 							<div className="row">
 								<div className="col-sm-3">
-									<input type="text" value={this.state.searchValue} className="form-control input" onChange={this.setSearchValue}/>
+									<input type="text"placeholder="Enter search key" value={this.state.searchValue} className="form-control input" onChange={this.setSearchValue}/>
 								</div>
 								<div className="col-sm-2">
 									<button type="button" className="btn btn-primary submit" onClick={this.getSearchResult}>Search</button>
