@@ -52,10 +52,10 @@
 .row {
   padding: 3%;
 }
-.rounded-circle {
-  height: 180px;
-  width: 70px;
-  padding: 10%;
+.image {
+  height: auto;
+  width: 65%;
+  margin: auto;
 }
 .btn {
   margin-right: 1%;
