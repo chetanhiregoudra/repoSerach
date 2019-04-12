@@ -25,25 +25,25 @@ class App extends Component {
 		let cardDetails = searchRepositoryCards.map(data =>{
 				return (
 					<div className="col-sm-3" key={data.id}>
-				<div className="card" >
-				<img className="card-img-top rounded-circle img-responsive" src={data.owner.avatar_url} alt="Card image" />
-				<div className="card-body">
-					<h4 className="card-title">{data.name}</h4>
-					<div class="btn-group btn-group-justified">
-						<a href="#" target="_blank" class="btn btn-default"><span class="glyphicon glyphicon-asterisk"></span>&nbsp; {data.size}</a>
-						<a href={data.forks_url} target="_blank" class="btn btn-default">
-							<i class="fas fa-code-branch"></i>
-								&nbsp;Forks&nbsp; {data.forks}
-						</a>
-						<a href={data.issues_url} target="_blank" class="btn btn-default">
-							<i class="fas fa-info-circle"></i>
-							&nbsp;Open Issues &nbsp;{data.open_issues}</a>
+						<div className="card" >
+						<img className="image rounded-circle img-responsive" src={data.owner.avatar_url} alt="Card"/>
+						<div className="card-body">
+							<h4 className="card-title">{data.name}</h4>
+							<div class="btn-group btn-group-justified">
+								<a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-default"><span class="glyphicon glyphicon-asterisk"></span>&nbsp; {data.size}</a>
+								<a href={data.forks_url} target="_blank" rel="noopener noreferrer" className="btn btn-default">
+									<i className="fas fa-code-branch"></i>
+										&nbsp;Forks&nbsp; {data.forks}
+								</a>
+								<a href={data.issues_url} target="_blank" rel="noopener noreferrer" className="btn btn-default">
+									<i className="fas fa-info-circle"></i>
+									&nbsp;Open Issues &nbsp;{data.open_issues}</a>
+							</div>
+								<p className="card-text">{data.description}</p>
+							<a href={data.html_url} className="btn btn-primary stretched-link">VIEW PROFILE</a>
+						</div>
 					</div>
-						<p className="card-text">{data.description}</p>
-					<a href={data.html_url} className="btn btn-primary stretched-link">VIEW PROFILE</a>
-				</div>
-			</div>
-			</div>)
+					</div>)
 		})
 		return cardDetails;
 	}
